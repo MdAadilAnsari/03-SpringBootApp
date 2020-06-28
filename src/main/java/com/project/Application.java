@@ -8,7 +8,9 @@ public class Application {
 
 	public static final String REST-URL = "https://www.firstcry.com/getshirt";
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		ConfigurableApplicationContext ctxt = SpringApplication.run(Application.class, args);
+
+		ctxt.close();
 	}
 
 }
